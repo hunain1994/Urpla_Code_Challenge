@@ -1,8 +1,14 @@
-<div *ngFor="let hero of heroes" class="card" style="width: 18rem">
-  <img class="card-img-top" [src]="hero.photo" alt="Card image cap" />
-  <div class="card-body">
-    <h5 class="card-title">{{ hero.name }}</h5>
+<h1 class="text-center">Marvel Heroes</h1>
 
-    <a [routerLink]="[hero.id]" class="btn btn-primary">Show Bio</a>
+<div class="row">
+  <div *ngFor="let hero of heroes" class="card" style="width: 18rem">
+    <img class="card-img-top" [src]="hero.photo" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title text-center">{{ hero.name }}</h5>
+      <div class="text-center">
+        <a [routerLink]="[hero.id]" class="btn btn-primary">Show Bio</a>
+      </div>
+    </div>
   </div>
 </div>
+
